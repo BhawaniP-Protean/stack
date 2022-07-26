@@ -1,0 +1,62 @@
+#include<iostream>
+#define Max 10
+using namespace std;
+
+int pop();
+int display();
+
+int top=-1;
+int s[Max];
+int item;
+int push(int item){
+    if(top==Max-1){
+        cout<<"stack is full"<<endl;
+    }
+    else{
+        top=top+1;
+        s[top]=item;
+    }
+}
+int pop(){
+    int item;
+if(top==-1){
+    cout<<"stack is empty"<<endl;
+}
+else{
+    item=s[top];
+    top=top-1;
+    cout<<"the item is deleted"<<item;
+
+}}
+
+int display(){
+for(int i=0;i<=Max;i++){
+    cout<<s[i]<<" ";
+}}
+
+int main()
+{
+
+    while(1){
+            int choose;
+        cout<<"which operation do you want to perform"<<endl;
+        cout<<"1.push  2.pop  3.display "<<endl;
+        cin>>choose;
+
+        switch(choose){
+        case 1: cout<<"enter the item"<<endl;
+        int item;
+                cin>>item;
+                push(item);
+                break;
+                case 2:
+                pop();
+                break;
+                case 3: display();
+                break;
+                default:"you can exit by entering any other key";
+
+                }
+
+    }
+}
