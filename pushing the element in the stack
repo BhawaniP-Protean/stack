@@ -1,0 +1,43 @@
+#include<iostream>
+#define Max 10
+using namespace std;
+int s[Max],top=-1;
+int push(int item){
+
+if(top==Max-1){
+    cout<<"stack is full"<<endl;
+}
+else{
+    top=top+1;
+    s[top]=item;
+}
+
+}
+
+void display(){
+for(int i=0;i<Max;i++){
+    cout<<s[i]<<" ";
+}}
+int main(){
+    int k=1;
+    while(k==1){
+            cout<<"1.push  2.display"<<endl;
+        int choose;
+    cout<<"choose"<<endl;
+        cin>>choose;
+        int item;
+
+        switch(choose){
+        case 1: cout<<"enter the element"<<endl;
+                cin>>item;
+                    push(item);
+                break;
+        case 2: display();
+                break;
+        default: "exit";
+        }
+        cout<<"enter  1 for continue"<<endl;
+        cin>>k;
+
+    }
+}
